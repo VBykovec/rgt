@@ -11,12 +11,21 @@ gem 'compass-rails'
 gem 'jquery-rails'
 gem 'rails-backbone'
 gem 'haml_coffee_assets'
-gem 'carrierwave'
+gem 'cancan'
+gem 'devise'
 gem 'acts-as-list'
 
 
 # Gems used only for assets and not required
 # in production environments by default.
+
+group :test, :development do
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'factory_girl_rspec'
+  gem 'database_cleaner'
+end
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
