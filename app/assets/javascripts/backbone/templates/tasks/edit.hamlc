@@ -1,0 +1,14 @@
+.modal-header
+  %h1 Edit Task
+.modal-body
+  = @deadline
+  %form(id="edit-task" name="task")
+    .field
+      %label(for="name") Description:
+      %input{:type=>"text",:name=>"name",:id=>"name",:value=>@description}  
+      %label(for="deadline") Deadline:
+      %input{:type=>"text",:name=>"deadline",:id=>"deadline", :class => 'date', :value=> @deadline}  
+    .actions 
+      %input(type="submit" value="Update Task") 
+.modal-footer
+  %a.btn(href="#") Back

@@ -1,0 +1,261 @@
+// Place all the styles related to the index controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  background-image: url('background.png');
+}
+#projects{
+  width: 100%;
+  h1,h2{
+    text-align: center;
+    }
+  .projects {
+    a.btn{
+      text-shadow: 1px 1px 1px black, 0 0 1px blue; 
+      border-color: #315589;
+      color: white;
+      display: block;
+      width: 210px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px;
+      background-image: url(todo.png);
+      background: -webkit-linear-gradient(bottom, #315589, #4485ba);
+      background: -o-linear-gradient(bottom, #315589, #4485ba); /* Opera 11.10+ */
+      background: -ms-linear-gradient(bottom, #315589, #4485ba); /* IE10 */
+      background: -moz-linear-gradient(bottom, #315589, #4485ba); /* IE10 */
+      background: linear-gradient(bottom, #315589, #4485ba); /* CSS3 */ 
+    }
+  }
+}
+
+.project{
+  width: 700px;
+  vertical-align: top;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  position: relative;
+  .project-task-form{
+    -moz-box-shadow:    1px 1px 2px 1px #315589;
+    -webkit-box-shadow: 1px 1px 2px 1px #315589;
+    box-shadow:         1px 1px 2px 1px #315589;
+    display: inline-block;
+    height: 50px;
+    vertical-align: middle;
+    width: 100%;
+    background: #cecece;
+    text-color: green;
+    text-align: right;
+    clear: both;
+    form {
+      .add-task{
+        cursor: pointer;
+        text-shadow: 1px 1px 1px black, 0 0 1px blue; 
+        color: white;
+        border-radius: 0px 5px 5px 0px;
+        line-height: 30px;
+        height: 30px;
+        vertical-align: middle;
+        text-align: center;
+        width: 108px;
+        display: block;
+        float: left;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background: -webkit-linear-gradient(bottom, #508767, #94cbae);
+        background: -o-linear-gradient(bottom, #508767, #94cbae); /* Opera 11.10+ */
+        background: -ms-linear-gradient(bottom, #508767, #94cbae); /* IE10 */
+        background: -moz-linear-gradient(bottom, #508767, #94cbae); /* IE10 */
+        background: linear-gradient(bottom, #508767, #94cbae); /* CSS3 */ 
+      }
+      .my-btn{
+        cursor: pointer;
+        vertical-align: middle;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        color: #599072;
+        font-size: 30px;
+        text-shadow: 0px 2px 3px #354f40;
+        line-height: 30px;
+        height: 30px;
+        width: 50px;
+        float: left;
+      }
+      input{
+        vertical-align: middle;
+        line-height: 24px;
+        margin-top: 10px;
+        margin-bottom: 9px;
+        float: left;
+        height: 24px;
+        width: 528px;
+      }
+      width: 100%;
+    }
+  }
+  .project-header {
+    -moz-box-shadow:    1px 1px 2px 1px #315589;
+    -webkit-box-shadow: 1px 1px 2px 1px #315589;
+    box-shadow:         1px 1px 2px 1px #315589;
+    text-shadow: 1px 1px 1px black, 0 0 1px blue; 
+    cursor: pointer;
+    &:hover{
+      .project-actions{
+        display: block;
+      }
+    }
+    width: 100%;
+    height: 48px;
+    background: -webkit-linear-gradient(bottom, #315589, #4485ba);
+    background: -o-linear-gradient(bottom, #315589, #4485ba); /* Opera 11.10+ */
+    background: -ms-linear-gradient(bottom, #315589, #4485ba); /* IE10 */
+    background: -moz-linear-gradient(bottom, #315589, #4485ba); /* IE10 */
+    background: linear-gradient(bottom, #315589, #4485ba); /* CSS3 */ 
+    color: white;
+    .project-logo{
+      vertical-align: middle;
+      width: 40px;
+      height: 28px;
+      float: left;
+      margin: 10px 10px 10px 10px;
+    }
+    .project-name{
+      margin: 10px 10px 10px 10px;
+      line-height: 28px;
+      height: 28px;
+      vertical-align: middle;
+      width: 530px;
+      float: left;
+    }
+    .project-actions{
+      color: #8daed7;
+      display: none;
+      width: 60px;
+      line-height: 28px;
+      margin: 10px 20px 10px 5px;
+      text-align: right;
+      float: right;
+    }
+  }
+  .project-task{
+    -moz-box-shadow:    1px 1px 2px 1px #315589;
+    -webkit-box-shadow: 1px 1px 2px 1px #315589;
+    box-shadow:         1px 1px 2px 1px #315589;
+    color: #999999;
+    cursor: pointer;
+    &:hover{
+      background: #fcfed5;
+      .task-actions .task-edit{
+        display: inline-block;
+        }  
+    }
+    &:last-child{
+      border-radius: 0px 0px 10px 10px;
+    }
+    display: inline-block;
+    border-bottom: 1px solid #e7ebea;
+    border-left: 1px solid #e7ebea;
+    border-right: 1px solid #e7ebea;
+    height: 49px;
+    vertical-align: middle;
+    width: 698px;
+    background-color: white;
+    text-align: right;
+    clear: both;
+    .task-complete{
+        vertical-align: middle;
+        text-align: center;
+        font-size: 30px;
+        line-height: 50px;
+        height: 50px;
+        width: 47px;
+        float: left;
+        border-right: 3px double #efdadf;
+    }
+    .task-name{
+      span.done{
+        text-decoration: line-through;
+        color: red;
+        span.over{
+          color: green;
+          }
+      }
+      vertical-align: middle;
+      line-height: 30px;
+      padding-left: 10px;
+      text-align: left;
+      margin-top: 9px;
+      margin-bottom: 9px;
+      float: left;
+      height: 28px;
+      width: 518px;
+    }
+    .task-actions{
+      height: 50px;
+      width: 119px;
+      border-left: 1px solid #e7ebea;
+      line-height: 28px;
+      margin: 0;
+      text-align: right;
+      float: right;
+
+      .task-edit{ 
+        .task-up,.task-down{
+          vertical-align: middle;
+          text-align: center;
+          width: 10px;
+          margin-left: 15px;
+          height: 15px;
+          background: no-repeat;
+        }
+        .task-up{
+          background-image: url(up.png);
+          background-position: center center;
+          border-bottom: 1px solid;
+          }
+        .task-down{
+          background-image: url(down.png);
+          background-position: center center;
+          }
+        
+        display: none;
+        width: 38px;
+        height: 30px;
+        &:first-child{
+          border-right: 1px solid #cccccc;  
+        }
+        &:last-child{
+          border-left: 1px solid #cccccc;
+          }
+        margin-top: 10px;
+        margin-bottom: 10px;
+        line-height: 30px;
+        vertical-align: middle;
+        text-align: center;
+        float: left;
+      }
+      .task-remove{
+        
+       }
+      .task-position{}
+    }
+  }
+}
+.modal-header, .modal-footer{
+    text-shadow: 1px 1px 1px black, 0 0 1px blue; 
+    background: -webkit-linear-gradient(bottom, #315589, #4485ba);
+    background: -o-linear-gradient(bottom, #315589, #4485ba); /* Opera 11.10+ */
+    background: -ms-linear-gradient(bottom, #315589, #4485ba); /* IE10 */
+    background: -moz-linear-gradient(bottom, #315589, #4485ba); /* IE10 */
+    background: linear-gradient(bottom, #315589, #4485ba); /* CSS3 */ 
+ }
+.modal-body{
+    background: #fcfed5;
+  }
+ 

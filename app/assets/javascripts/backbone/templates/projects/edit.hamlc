@@ -1,0 +1,11 @@
+.modal-header
+  %h1 Edit project
+.modal-body
+  %form(id="edit-projects" name="project")
+    .field
+      %label(for="name") name:
+      %input{:type=>"text",:name=>"name",:id=>"name",:value=>@name}  
+    .actions 
+      %input(type="submit" value="Update Project") 
+.modal-footer
+  %a.btn(href="#") Back

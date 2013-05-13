@@ -1,0 +1,16 @@
+.project-header<
+  .project-logo
+    %img(src="/assets/app.png")
+  .project-name= @name
+  .project-actions
+    %a.edit(href="##{@id}/edit") 
+      %img(src="/assets/edit.png")
+    |
+    %a.destroy(href="##{@id}/destroy") 
+      %img(src="/assets/remove.png")
+.project-task-form<
+  %form
+    .my-btn +
+    %input(placeholder='Start type here to create a task')
+    .add-task
+      Add Task

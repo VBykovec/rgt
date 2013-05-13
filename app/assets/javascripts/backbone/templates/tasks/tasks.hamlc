@@ -1,0 +1,20 @@
+.task-complete
+  - if(@status)
+    %input(type='checkbox' checked)
+  - else
+    %input(type='checkbox')
+.task-name
+  - if @status
+    %span.done
+      %span.over
+        = @description.substring(0,70)
+  -else 
+    = @description.substring(0,70)
+.task-actions
+  .task-edit
+    .task-up
+    .task-down
+  .task-edit.edit
+    %img(src="/assets/edit-small.png")
+  .task-edit.destroy
+    %img(src="/assets/remove-small.png")

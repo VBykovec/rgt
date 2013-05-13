@@ -1,6 +1,7 @@
 #= require_self
 #= require_tree ./templates
-#= require_tree ./models
+#= require ./models/tasks
+#= require ./models/projects
 #= require_tree ./views
 #= require_tree ./routers
 

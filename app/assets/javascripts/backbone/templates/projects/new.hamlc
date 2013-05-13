@@ -1,0 +1,11 @@
+.modal-header
+  %h1 New TODO List
+.modal-body
+  %form#new-project(name="project")
+    .field
+      %label(for="name") name:
+      %input(type="text" name="name" id="name" value=@name)
+    .actions
+      %input(type="submit" value="Create TODO LIST") 
+.modal-footer
+  %a.btn(href="#") Cancel

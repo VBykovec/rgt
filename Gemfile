@@ -2,18 +2,22 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'bootstrap-sass'
 gem 'compass-rails'
 gem 'jquery-rails'
-gem 'rails-backbone'
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
+gem 'backbone-on-rails'
+gem 'backbone-validation-rails'
 gem 'haml_coffee_assets'
+gem 'haml-rails'
 gem 'cancan'
-gem 'devise'
-gem 'acts-as-list'
+gem 'devise', '~> 3.0.0rc'
+gem 'acts_as_list'
+gem 'inherited_resources'
+gem 'haml'
 
 
 # Gems used only for assets and not required

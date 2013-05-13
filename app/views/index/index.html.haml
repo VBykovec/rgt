@@ -1,0 +1,28 @@
+#projects
+  - if current_user
+    Loading...
+  - else 
+    #auth.modal.hide.fade
+      .modal-header
+        %h3 Please type your Login and Password
+      .modal-body
+        = form_for :user, :url => new_user_session_path do |f|
+          %div
+            = f.label :email
+            = f.email_field :email, :autofocus => true
+          %div
+            = f.label :password
+            = f.password_field :password
+      .modal-footer
+        %a#login.btn.btn-primary(href="#")
+          Login
+
+:javascript
+  if($('#auth').length == 0){
+    window.router = new Rgt.Routers.ProjectsRouter({projects: #{@projects.to_json} });
+    Backbone.history.start();
+  }
+  else
+    $('#auth').modal();
+
+#projects-dialog.modal.hide.fade
