@@ -37,7 +37,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   && rm -rf /var/lib/apt/lists/*
 
 # Specify the version of Rails to install
-ENV RAILS_VERSION 3.2.13
+ENV RAILS_VERSION 3.2.13 \
+    RAILS_ENV = production \
 RUN gem install rails --version "$RAILS_VERSION"
 
 
