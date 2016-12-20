@@ -47,9 +47,10 @@ test:
   password:
 
 production:
+  host: <%= DB_HOST %>
   adapter: postgresql
   encoding: unicode
   database: rgt_production
   pool: 5
   username: vit
-  password:
+  password: <%= DB_PASSWORD %>
