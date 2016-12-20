@@ -47,10 +47,10 @@ test:
   password:
 
 production:
-  host: <%= DB_HOST %>
+  host: <%= ENV['DB_HOST'] %>
   adapter: postgresql
   encoding: unicode
   database: rgt_production
   pool: 5
   username: vit
-  password: <%= DB_PASSWORD %>
+  password: <%= ENV['DB_PASSWORD'] %>
